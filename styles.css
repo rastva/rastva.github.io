@@ -11,35 +11,75 @@ body {
   color: #333;
 }
 
-/* Класс container для центровки контента */
+/* Контейнер для центровки */
 .container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Стиль для хедера */
+/* Стили для header */
 header {
   background: #5cb85c;
   color: #fff;
   padding: 20px 0;
+  position: relative;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 header h1 {
-  display: inline;
+  margin: 0;
 }
-nav {
-  float: right;
-}
+
+/* Навигация */
 nav ul {
   list-style: none;
+  display: flex;
+  align-items: center;
 }
 nav ul li {
-  display: inline;
   margin-left: 20px;
+  position: relative;
 }
 nav ul li a {
   color: #fff;
   text-decoration: none;
+  padding: 5px 10px;
+}
+
+/* Dropdown меню */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background: #fff;
+  min-width: 160px;
+  top: 35px;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+.dropdown .dropdown-content a {
+  color: #333;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown .dropdown-content a:hover {
+  background: #f1f1f1;
+}
+
+/* Mobile Menu Toggle (скрыто на больших экранах) */
+.mobile-menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #fff;
 }
 
 /* Секция hero */
@@ -85,7 +125,7 @@ nav ul li a {
   margin: 10px 0;
 }
 
-/* Контактная форма */
+/* Форма */
 form {
   max-width: 600px;
   margin: 0 auto;
@@ -124,13 +164,25 @@ footer {
 
 /* Адаптивность */
 @media (max-width: 768px) {
-  nav {
-    float: none;
-    text-align: center;
-    margin-top: 10px;
+  nav ul {
+    flex-direction: column;
+    display: none; /* начальное скрытие для мобильного меню */
+    width: 100%;
+    background: #5cb85c;
+    position: absolute;
+    top: 60px;
+    left: 0;
   }
   nav ul li {
-    display: block;
     margin: 10px 0;
+    text-align: center;
+  }
+  .mobile-menu-toggle {
+    display: block;
+  }
+  /* Показываем меню при активном состоянии */
+  nav ul.active {
+    display: flex;
   }
 }
+

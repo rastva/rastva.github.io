@@ -1,18 +1,16 @@
-// Пример простой обработки формы
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  
-  // Получение данных из формы
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const message = document.getElementById('message').value.trim();
+// Скрипт для мобильного меню
+const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+const navUl = document.querySelector('nav ul');
 
-  if(name && email && message) {
-    // Здесь можно добавить отправку данных на сервер через fetch/AJAX
-    alert('Спасибо! Мы свяжемся с вами в ближайшее время.');
-    // Очистка формы
-    this.reset();
-  } else {
-    alert('Пожалуйста, заполните все поля.');
-  }
+mobileMenuToggle.addEventListener('click', () => {
+  navUl.classList.toggle('active');
 });
+
+// Обработка отправки формы через Formspree
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  // Для вывода сообщений можно использовать стандартное поведение формы,
+  // так как Formspree обрабатывает отправку. Если хотите дополнительно
+  // уведомить пользователя, можно добавить уведомление.
+  alert('Ваше сообщение отправлено, спасибо!');
+});
+
