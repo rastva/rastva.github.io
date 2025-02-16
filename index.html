@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Музыкальный креатор</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Кнопка для открытия всплывающего меню -->
+  <button class="menu-btn" id="open-menu">&#9776;</button>
+
+  <!-- Всплывающее меню -->
+  <nav id="popup-menu" class="menu">
+    <button class="close-btn" id="close-menu">&times;</button>
+    <ul>
+      <li><a href="#about">Обо мне</a></li>
+      <li><a href="#music">Моя музыка</a></li>
+      <li><a href="#contact">Контакты</a></li>
+    </ul>
+  </nav>
+
+  <!-- Основное содержимое страницы -->
+  <header>
+    <h1>Привет, я креатор собственной музыки!</h1>
+    <p>Здесь ты можешь узнать обо мне и послушать мои треки.</p>
+  </header>
+
+  <section id="about">
+    <h2>Обо мне</h2>
+    <p>Я увлечённый музыкант и создатель уникальных звуков. Здесь я делюсь своей музыкой с миром.</p>
+  </section>
+
+  <section id="music">
+    <h2>Моя музыка</h2>
+    <p>Список моих треков и последние релизы.</p>
+    <!-- Пример встраивания аудио -->
+    <audio controls>
+      <source src="yourtrack.mp3" type="audio/mpeg">
+      Ваш браузер не поддерживает воспроизведение аудио.
+    </audio>
+  </section>
+
+  <section id="contact">
+    <h2>Контакты</h2>
+    <p>Свяжитесь со мной через:</p>
+    <ul>
+      <li>Email: <a href="mailto:creator@example.com">creator@example.com</a></li>
+      <li>Instagram: <a href="https://instagram.com/creator" target="_blank">@creator</a></li>
+    </ul>
+  </section>
+  
+  <footer>
+    <p>&copy; 2023 Музыкальный креатор. Все права защищены.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
