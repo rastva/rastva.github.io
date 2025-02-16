@@ -1,20 +1,18 @@
-// Получаем элементы меню и кнопок
-const openMenuBtn = document.getElementById('open-menu');
-const closeMenuBtn = document.getElementById('close-menu');
-const popupMenu = document.getElementById('popup-menu');
+// Пример простой обработки формы
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  // Получение данных из формы
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
 
-// Функция для открытия меню
-openMenuBtn.addEventListener('click', () => {
-  popupMenu.classList.add('active');
-});
-
-// Функция для закрытия меню
-closeMenuBtn.addEventListener('click', () => {
-  popupMenu.classList.remove('active');
-});
-
-// Дополнительно: Закрывать меню при клике на любую ссылку внутри меню
-const menuLinks = popupMenu.querySelectorAll('a');
-menuLinks.forEach(link => {
-  link.addEventListener('click', () => popupMenu.classList.remove('active'));
+  if(name && email && message) {
+    // Здесь можно добавить отправку данных на сервер через fetch/AJAX
+    alert('Спасибо! Мы свяжемся с вами в ближайшее время.');
+    // Очистка формы
+    this.reset();
+  } else {
+    alert('Пожалуйста, заполните все поля.');
+  }
 });

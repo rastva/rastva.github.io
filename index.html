@@ -3,65 +3,97 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Музыкальный креатор</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Children World Analog</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Кнопка для открытия всплывающего меню -->
-  <button class="menu-btn" id="open-menu">&#9776;</button>
-
-  <!-- Всплывающее меню -->
-  <nav id="popup-menu" class="menu">
-    <button class="close-btn" id="close-menu">&times;</button>
-    <ul>
-      <li><a href="#about">Обо мне</a></li>
-      <li><a href="#music">Моя музыка</a></li>
-      <li><a href="#contact">Контакты</a></li>
-    </ul>
-  </nav>
-
-  <!-- Основное содержимое страницы -->
+  <!-- Хедер -->
   <header>
-    <h1>Привет, я креатор собственной музыки!</h1>
-    <p>Здесь ты можешь узнать обо мне и послушать мои треки.</p>
+    <div class="container">
+      <h1>Children World</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Главная</a></li>
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#gallery">Галерея</a></li>
+          <li><a href="#events">События</a></li>
+          <li><a href="#contact">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <section id="about">
-    <h2>Обо мне</h2>
-    <p>Я увлечённый музыкант и создатель уникальных звуков. Здесь я делюсь своей музыкой с миром.</p>
+  <!-- Секция "Главная" -->
+  <section id="home" class="hero">
+    <div class="container">
+      <h2>Добро пожаловать в мир детей!</h2>
+      <p>Образовательный и развлекательный портал для малышей и подростков.</p>
+      <a href="#about" class="btn">Узнать больше</a>
+    </div>
   </section>
 
-  <section id="music">
-    <h2>Моя музыка</h2>
-    <p>Нажми на одну из ссылок ниже для прослушивания треков:</p>
-    <ul>
-      <li>
-        <a href="https://app.box.com/s/29tkq6t1un7c9eqz1agclx5xuvwm1oz7" target="_blank">
-          Breaking Free Tonight
-        </a>
-      </li>
-      <li>
-        <a href="https://app.box.com/s/kxuz6lgz5ctq1b5xlqkeizbay84zazp8" target="_blank">
-          Chasing the Horizon
-        </a>
-      </li>
-    </ul>
+  <!-- Секция "О нас" -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>О нас</h2>
+      <p>Мы предлагаем разнообразный контент для развития детей, включающий образовательные игры, интерактивные задания и развлекательные мероприятия. Наш сайт поможет детям узнавать новое и весело проводить время онлайн.</p>
+    </div>
   </section>
 
-  <section id="contact">
-    <h2>Контакты</h2>
-    <p>Свяжитесь со мной через:</p>
-    <ul>
-      <li>Email: <a href="mailto:creator@example.com">creator@example.com</a></li>
-      <li>Instagram: <a href="https://instagram.com/creator" target="_blank">@creator</a></li>
-    </ul>
+  <!-- Секция "Галерея" -->
+  <section id="gallery" class="section">
+    <div class="container">
+      <h2>Галерея</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="images/sample1.jpg" alt="Image 1"></div>
+        <div class="gallery-item"><img src="images/sample2.jpg" alt="Image 2"></div>
+        <div class="gallery-item"><img src="images/sample3.jpg" alt="Image 3"></div>
+        <div class="gallery-item"><img src="images/sample4.jpg" alt="Image 4"></div>
+      </div>
+    </div>
   </section>
-  
+
+  <!-- Секция "События" -->
+  <section id="events" class="section">
+    <div class="container">
+      <h2>События</h2>
+      <article class="event">
+        <h3>Весёлый праздник</h3>
+        <p>Присоединяйтесь к нашему онлайн-празднику с конкурсами и играми.</p>
+      </article>
+      <article class="event">
+        <h3>Образовательный вебинар</h3>
+        <p>Узнайте много нового на наших вебинарах для родителей и детей.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Секция "Контакты" -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Контакты</h2>
+      <form id="contactForm">
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Сообщение:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        
+        <button type="submit">Отправить</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Футер -->
   <footer>
-    <p>&copy; 2023 Музыкальный креатор. Все права защищены.</p>
+    <div class="container">
+      <p>&copy; 2023 Children World Analog. Все права защищены.</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
-

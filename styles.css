@@ -1,0 +1,136 @@
+/* Сброс стилей базовых элементов */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Класс container для центровки контента */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Стиль для хедера */
+header {
+  background: #5cb85c;
+  color: #fff;
+  padding: 20px 0;
+}
+header h1 {
+  display: inline;
+}
+nav {
+  float: right;
+}
+nav ul {
+  list-style: none;
+}
+nav ul li {
+  display: inline;
+  margin-left: 20px;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Секция hero */
+.hero {
+  background: url('images/hero.jpg') center/cover no-repeat;
+  color: #fff;
+  padding: 100px 0;
+  text-align: center;
+}
+.hero .btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #337ab7;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Основные секции */
+.section {
+  padding: 60px 0;
+}
+.section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Галерея */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+.gallery-item img {
+  width: 100%;
+  display: block;
+}
+
+/* События */
+.event {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 10px 0;
+}
+
+/* Контактная форма */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+form label {
+  margin: 10px 0 5px;
+}
+form input, form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+form button {
+  margin-top: 15px;
+  padding: 10px;
+  border: none;
+  background: #5cb85c;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+form button:hover {
+  background: #4cae4c;
+}
+
+/* Футер */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 20px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  nav {
+    float: none;
+    text-align: center;
+    margin-top: 10px;
+  }
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+}
